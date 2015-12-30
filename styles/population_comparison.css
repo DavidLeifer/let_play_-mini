@@ -1,0 +1,23 @@
+html, body { height: 100%; width: 100%; margin: 0; padding: 0; }
+      #map{ margin: 0; padding: 0; }
+      #feedback {
+        position: absolute;
+        height: 330px;
+        font-family: arial;
+        margin: 5px;
+        padding: 5px;
+        z-index: 40;
+        background: #fff;
+        color: #444;
+        width: 300px;
+        right: 30px;
+        bottom: 30px;
+        -moz-box-shadow: 0 0 5px #888;
+        -webkit-box-shadow: 0 0 5px #888;
+        box-shadow: 0 0 5px #888;
+      }
+      #county { 
+        padding: 5px 0 0 0;
+        font-weight: 700;
+      }
+      h3 { margin: 0 0 5px 0; border-bottom: 1px solid #444; }

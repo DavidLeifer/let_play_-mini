@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html dir="ltr">
+
+	<link rel="stylesheet" href="http://js.arcgis.com/3.14/esri/css/esri.css">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<!--The viewport meta tag is used to imporve the presentation and behavior on iOS devices-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<!-- Sets whether a web application runs in full-screen mode -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<!-- // Chrome for Android -->
+	<meta name="mobile-web-app-capable" content="yes">
+	<title>Search app with multiple sources</title>
+	<link rel="stylesheet" href="https://js.arcgis.com/3.14/dijit/themes/claro/claro.css">
+	<link rel="stylesheet" href="https://js.arcgis.com/3.14/esri/css/esri.css">
+	<style>
+		html,
+		body,
+		#map {
+			height: 100%;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+		}
+		#search {
+			display: block;
+			position: absolute;
+			z-index: 2;
+			top: 20px;
+			left: 74px;
+		}
+	</style>
+	
+	<script src="https://js.arcgis.com/3.14compact/init.js"></script>
+	<script src="js/search_leifer_district.js"></script>
+</head>
+
+<body>
+	<div id="search"></div>
+	<div id="map"></div>
+</body>
+
+</html>

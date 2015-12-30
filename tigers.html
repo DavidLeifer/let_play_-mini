@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--The viewport meta tag is used to imporve the presentation and behavior on iOS devices-->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <!-- Sets whether a web application runs in full-screen mode -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- // Chrome for Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Let's Play</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo.png">
+
+    <!--scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    
+    <!--styles-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/swiper.min.css">
+
+    <!-- Demo styles -->
+    <style>
+    html, body {
+        position: relative;
+        height: 100%;
+    }
+    body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+    }
+    .swiper-container {
+        width: 100%;
+        height: 600px;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        background: -webkit-gradient(linear, center top, center bottom, from(#000), to(#ffffff));
+        background: -webkit-linear-gradient(#000, #ffffff);
+        background: -moz-linear-gradient(#000, #ffffff);
+        background: -o-linear-gradient(#000, #ffffff);
+        background: -ms-linear-gradient(#000, #ffffff);
+        background: linear-gradient(#000, #ffffff);
+        overflow: hidden;
+    }
+    .swiper-pagination-bullet {
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        font-size: 12px;
+        color:#FFF;
+        opacity: 1;
+        background: rgba(0,0,0,.5);
+    }
+    .swiper-pagination-bullet-active {
+        color:#fff;
+        background: #007aff;
+    }
+    </style>
+</head>
+<body>
+<!--start navbar-->
+  <nav id="myNavbar" class="navbar navbar-default navbar" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <!--logo-->
+            <a href="Home.html"><img src="images/logo.png" 
+            alt="" class="navbar-brand"></a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav nav-pills navbar-left">
+                <!--app dropdown list-->
+                <li class="dropdown">
+                  <a href="#" data-toggle="dropdown" class="dropdown-toggle">Applications <b class="caret"></b>
+                  </a>
+                    <ul class="dropdown-menu">
+                      <li><a href="population_comparison.html" onclick="showLegend(this)"; >Population Comparison</a></li>
+                      <li><a href="Search_app_uni.html" onclick="showLegend(this)"; >University Search</a></li>
+                      <li><a href="Search_app_senator.html" onclick="showLegend(this)"; >Senator Search</a></li>
+                      <li><a href="Routing_map.html" onclick="showLegend(this)"; >Routing</a></li>
+                      <li><a href="https://uwec.maps.arcgis.com/apps/webappviewer/index.html?id=92e24a5904174af0a9e590d9869dcf9b" onclick="showLegend(this)"; >The Priory</a></li>
+                      <li><a href="mobile_vgi.html" onclick="showLegend(this)"; >VGI Editor</a></li>
+                    </ul>
+                    <!--blog dropdown list-->
+                  <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Blogs <b class="caret"></b>
+                    </a>
+                      <ul class="dropdown-menu">
+                        <li><a href="http://geography335.blogspot.com/" onclick="showLegend(this)"; >Geography 335: GIS 1</a></li>
+                        <li><a href="http://geography336fall2015.blogspot.com/" onclick="showLegend(this)"; >Geography 336: Field Methods</a></li>
+                        <li><a href="http://davidleifergis2.blogspot.com/" onclick="showLegend(this)"; >Geography 337: GIS 2</a></li>
+                        <li><a href="http://geography338spring2015.blogspot.com/" onclick="showLegend(this)"; >Geography 338: Remote Sensing </a></li>
+                        <li><a href="http://geography435spring2015.blogspot.com/" onclick="showLegend(this)"; >Geography 435: Chloride Source Analysis</a></li>
+                        <li><a href="http://geography455fall2015.blogspot.com/" onclick="showLegend(this)"; >Geography 455: GIS Web Development</a></li>
+                      </ul>
+                  </li>
+                </li>                      
+              </ul>
+              <ul class="nav nav-pills navbar-right">
+                <li><a href="tigers.html";>Tigers</a></li>
+                <li><a onclick="scrollWin()">Contact</a></li>
+                <script>
+                function scrollWin() {
+                window.scrollTo(0, 10000);
+                }
+                </script>
+            <!-- add search form -->
+            <form class="navbar-form navbar-right" role="search">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search this site">
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default">
+                        <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+                </div>
+            </form>
+              </ul>            
+            </div>
+        </div>
+<!--end navbar-->
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="images/tigers/tiger8or9.jpg" style="width:100%">
+            </div>
+            <div class="swiper-slide">
+            <img src="images/tigers/t4.jpg" style="width:100%">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/tigers/tig7.jpg" style="width:100%">
+            </div>
+            <div class="swiper-slide">
+            <img src="images/tigers/tiger6.jpg" style="width:100%">
+            </div>
+            <div class="swiper-slide">
+            <img src="images/tigers/baby_tiger.jpg" style="width:100%">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/tigers/whitetiger.jpg" style="width:100%">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/tigers/tigercircus.jpg" style="width:100%">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/tigers/tiger3.jpg" style="width:100%">
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+<!--GIS stuff-->
+    <div class="learn-more">
+    <div class="container">
+    <div class= "row">
+        <div class="col-md-4">
+      <h3>GIS Web Development</h3>
+      <p>View the power of converging online interactive maps and geospatial technologies.</p>
+      <p><a href="http://geography455fall2015.blogspot.com/">See how Web GIS can help you</a></p>
+        </div>
+      <div class="col-md-4">
+      <h3>UAV</h3>
+      <p>An emerging technological field combined with geospatially inclined minds.</p>
+      <p><a href="http://geography336fall2015.blogspot.com/2015/10/lab-4-unmanned-aerial-systems.html">Learn more about Unmanned Aerial Vehicles</a></p>
+      </div>
+      <div class="col-md-4">
+      <h3>Research</h3>
+      <p>See how GIS can positively impact existing academic fields.</p>
+      <p><a href="http://geography435spring2015.blogspot.com/">Learn about applying GIS</a></p>
+      </div>
+      </div>
+    </div>
+  </div>
+<!--start footer-->
+<footer>
+      <div id="footer">
+
+      <nav>
+        <p>David Leifer<p>
+        <p><a href="Home.html">105 Garfield Ave, Eau Claire, WI 54701</a></p>
+        <p>608-769-1297</p>
+        <ul>
+          <li><a href="https://www.facebook.com/leiferdj"><img src="images/facebook.png"></a> &nbsp;&nbsp; </li>
+          <li><a href="http://geography455fall2015.blogspot.com"><img src="images/Blogger.png"></a> &nbsp;&nbsp; </li>
+          <li><a href="leiferdj@uwec.edu"><img src="images/mail.png"></a> &nbsp;&nbsp; </li>
+          <li><a href="https://www.linkedin.com/profile/view?id=AAIAABUQI-YBPlZHtBU1utJ_9s8uKNejaPvNQwE&trk=nav_responsive_tab_profile_pic"><img src="images/li.png"></a> &nbsp;&nbsp; </li>
+        </ul>
+
+        <div id="footerSecond">
+          <p>Code abstracted from Sylvia Richardson 
+          of <a rei="liscense" href="http://creativ
+          ecommons.org/liscenses/by-ss/3.0/deed.en_
+          US">Creative Commons Attribution-Sharelike
+          3.0 Unported License</a>. &#174; Let's Play 
+          2015. All rights reserved. </p>
+        </div>
+      </nav>
+      </div>
+</footer>
+
+    <!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        paginationBulletRender: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + '</span>';
+        }
+    });
+    </script>
+</body>
+</html>

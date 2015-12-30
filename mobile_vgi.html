@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--The viewport meta tag is used to imporve the presentation and behavior on iOS devices-->
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<!-- Sets whether a web application runs in full-screen mode -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<!-- // Chrome for Android -->
+		<meta name="mobile-web-app-capable" content="yes">
+		<title>Mobile Editor</title>
+		<link rel="shortcut icon" type="image/x-icon" href="images/logo.png">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    	<link rel="stylesheet" href="https://js.arcgis.com/3.14/esri/css/esri.css">
+		<link rel="stylesheet" href="styles/leifer_VGI_styles.css">  
+		
+		<!--scripts-->
+
+		<script src="https://js.arcgis.com/3.14/"></script>
+		<script src="js/leifer_VGI.js"></script>
+	</head>
+
+<body>
+   
+   <!-- Content Pane --> 
+	<div id="contentPane">
+	  <div data-dojo-type="dijit/layout/ContentPane" id="templatePickerPane" data-dojo-props="region:'left'"> 			
+
+	  	<div id="panelHeader"> Click to add features </div>
+
+	  <div style="padding:1px;" id="editorDiv">
+	  </div>
+	</div>
+   </div>
+
+			<div id="search"></div>
+			<div id="map" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'">
+						<div id="LocateButton"></div>
+						<div id="HomeButton"></div>
+						<div id="cpBtn" onclick="toggleContentPane()">
+
+
+						<div id="LetsPlay">
+							<a href="Home.html"><img src="images/logo.png"></a>
+						</div>
+						</div>
+			</div>
+
+  </body>
+
+</html>

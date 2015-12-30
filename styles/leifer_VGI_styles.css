@@ -1,0 +1,115 @@
+html, body {
+		height: 100%;
+		width: 100%;
+		margin: 0;
+	  }
+	  
+	  body {
+		background-color: #f5f5f5;
+		overflow: hidden;
+		font-family: Helvetica, san-serif;
+	  }
+ 
+ 	  #templatePickerPane {
+		width: 150px;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+	  }
+	  #map {
+		height: 100%;
+		width: 100%;
+		padding: 0px;
+	  }
+	  #cpBtn{
+		z-index: 40;
+		position: fixed;
+		bottom: 136px;
+		left: 92%;
+		width: 30px;
+		height: 30px;
+		background: rgba(120,120,120,10);
+		background-image: url("data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2017.1.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0A%3C%21DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%201.1%2F%2FEN%22%20%22http%3A%2F%2Fwww.w3.org%2FGraphics%2FSVG%2F1.1%2FDTD%2Fsvg11.dtd%22%3E%0A%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%0A%09%20viewBox%3D%220%200%2014%2014%22%20enable-background%3D%22new%200%200%2014%2014%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cpath%20fill%3D%22%2357585A%22%20d%3D%22M1%2C10l-1%2C4l4-1l7-7L8%2C3L1%2C10z%20M11%2C0L9%2C2l3%2C3l2-2L11%2C0z%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+		border: #AAA 1px solid;
+		border-radius: 5px;
+		padding: 1px 5px;
+		cursor: pointer;
+	  }
+
+	  #contentPane{
+		z-index: 40;
+		position: fixed;
+		right: -250px;
+		top: 1%;
+		width: 10%;
+		height: 100%;
+		transition: right 0.3s linear 0s;
+	  }
+
+	  #panelHeader{
+	  	background-color: #154175;
+	    border-bottom: solid 1px #92A860;
+	    color: #FFF;
+	    font-size: 14px;
+	    line-height: 22px;
+	    margin: 0;
+	  }
+
+	  .esriEditor .templatePicker {
+		overflow: auto;
+		padding-bottom: 0px;
+		height: 100%;
+		border-radius: 0px 0px 2px 2px;
+		border: solid 1px #92A661;
+	  }
+	  .dj_ie .infowindow .window .top .right .user .content, .dj_ie .simpleInfoWindow .content {
+		position: relative;
+	  }
+
+	#map_zoom_slider{
+		top: 1%;
+		left: 1px;
+		}
+
+	#search {
+		display: block;
+		position: absolute;
+		z-index: 2;
+		top: 1%;
+		left: 38px;
+	}
+
+	#HomeButton {
+    	position: absolute;
+    	bottom: 43px;
+    	left: 92%;
+    	z-index: 50;
+    }
+
+    #LocateButton {
+      	position: absolute;
+      	bottom: 74px;
+     	left: 92%;
+     	z-index: 50;
+	}
+	
+	#LetsPlay{
+		z-index: 40;
+		position: fixed;
+		bottom: 105px;
+		left: 92%;
+		width: 30px;
+		height: 30px;
+		background: rgba(120,120,120,10);
+		border-radius: 5px;
+		padding: 1px 5px;
+		cursor: pointer;
+	  }
+	 #LetsPlay img{
+		z-index: 40;
+		position: fixed;
+		bottom: 105px;
+		left: 92%;
+		width: 30px;
+		height: 30px;
+	}
